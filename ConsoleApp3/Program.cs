@@ -10,7 +10,31 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Console.Write("Hello World");
+            Console.WriteLine("Hello World");
+
+            int i = 0;
+
+            foreach (string arg in args)
+            {
+                Console.WriteLine(String.Format("Argument #{0} = {1}", i, arg));
+                i++;
+            }
+            if (args.Length >= 3)
+            {
+
+                if (args[0] == "poo")
+                {
+                    Console.WriteLine("I have to pinch a loaf.");
+                }
+                if (args[1] == "pee")
+                {
+                    Console.WriteLine("I pee in the toilet.");
+                }
+
+                Console.WriteLine(String.Format("My favorite place to drink from the {0}.", args[2]));
+            }
+
+            Console.WriteLine("bye bye");
         }
     }
 }
